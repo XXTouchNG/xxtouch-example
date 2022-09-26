@@ -1,0 +1,30 @@
+{
+  "name": "example",
+  "version": "1.0.0",
+  "description": "An example to app.eval of XXTouchNG.",
+  "main": "index.js",
+  "scripts": {
+    "build": "frida-compile index -o test.js",
+    "test": "npm run build && frida -FU -l test.js",
+    "publish": "frida-compile -S -c index -o dist/publish.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/XXTouchNG/example.git"
+  },
+  "keywords": [
+    "frida",
+    "xxtouch"
+  ],
+  "author": "Lessica",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/XXTouchNG/example/issues"
+  },
+  "homepage": "https://github.com/XXTouchNG/example#readme",
+  "dependencies": {
+    "frida-compile": "^16.1.0",
+    "xxtouch-alert": "git+https://github.com/XXTouchNG/xxtouch-alert.git",
+    "xxtouch-proc": "git+https://github.com/XXTouchNG/xxtouch-proc.git"
+  }
+}
